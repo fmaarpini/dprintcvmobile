@@ -63,53 +63,120 @@
     .contact-text p { margin: 5px 0 0 0; font-size: 16px; color: #333; }
 
       /* BANNER */
-  .banner {
+ .banner {
   width: 100%;
-  max-width: 1920px;
+
+  /* REMOVE LIMITES QUE CAUSAM CORTE */
+  max-width: 100%;
+
+  /* ALTURA IDEAL PARA NOTEBOOKS 14"+ */
   height: 950px;
-  background: url("imagens/banner7.png") no-repeat center center/cover;
+
+  min-height: 820px;
+
+  /* IMAGEM */
+  background-image: url("imagens/banner7.png");
+
+  background-repeat: no-repeat;
+
+  /* MANTÉM O VISUAL BONITO */
+  background-size: cover;
+
+  /* AJUSTE PARA NÃO CORTAR AS LATERAIS */
+  background-position: center center;
+
+  background-color: #07152e;
+
   display: flex;
-  justify-content: flex-start;  /* mantém à esquerda */
-  align-items: center;           /* centraliza verticalmente */
-  text-align: left;              /* texto alinhado à esquerda */
-  padding-left: 90px;            /* ainda mais para a esquerda */
+
+  justify-content: flex-start;
+
+  align-items: center;
+
+  text-align: left;
+
+  /* ESPAÇAMENTO CONTROLADO */
+  padding-left: 90px;
+
   color: #fff;
+
   margin-top: 90px;
+
   position: relative;
-}
-.banner h1 {
-  font-size: 60px;
-  font-weight: bold;
-  color: #ebc526;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-  margin-bottom: 40px;
+
+  overflow: hidden;
 }
 
- .banner-buttons {
-        display: flex;
-        gap: 30px;
-        margin-top: 20px;
-        flex-wrap: wrap;
-      }
+/* CONTEÚDO */
+.banner-content {
+  max-width: 700px;
+
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 120px;
+}
+
+/* TÍTULO */
+.banner h1 {
+  font-size: 60px;
+
+  font-weight: bold;
+
+  color: #ebc526;
+
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+
+  margin-bottom: 40px;
+
+  line-height: 1.1;
+}
+
+/* BOTÕES */
+.banner-buttons {
+  display: flex;
+
+  gap: 30px;
+
+  margin-top: 20px;
+
+  flex-wrap: wrap;
+}
 
 .banner-buttons a {
   display: inline-block;
+
   padding: 15px 25px;
+
   border: 2px solid #ebc526;
+
   color: #fff;
+
   font-weight: 600;
+
   text-decoration: none;
+
   border-radius: 10px;
-  background: transparent;
+
+  background: rgba(16,32,65,0.55);
+
+  backdrop-filter: blur(4px);
+
   transition: all 0.3s ease;
 }
 
 .banner-buttons a:hover {
   background: #ebc526;
+
   color: #000;
+
   border-color: #ebc526;
+
+  transform: translateY(-2px);
 }
 
+/* INSTAGRAM */
 .instagram-icon svg .insta-path {
   transition: fill 0.3s ease;
 }
@@ -117,6 +184,41 @@
 .instagram-icon:hover svg .insta-path {
   fill: #C13584;
 }
+
+/* =========================
+   NOTEBOOKS 14" E 15"
+========================= */
+
+@media (min-width: 1366px) and (max-width: 1600px) {
+
+  .banner {
+    background-size: cover;
+
+    background-position: center center;
+
+    height: 900px;
+  }
+
+  .banner-content {
+    margin-top: 90px;
+  }
+
+}
+
+/* =========================
+   TELAS GRANDES / FULL HD
+========================= */
+
+@media (min-width: 1601px) {
+
+  .banner {
+    background-size: cover;
+
+    background-position: center center;
+  }
+
+}
+
 
       /* SEÇÕES */
       section {
