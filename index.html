@@ -63,26 +63,26 @@
     .contact-text p { margin: 5px 0 0 0; font-size: 16px; color: #333; }
 
       /* BANNER */
- .banner {
+/* =========================
+   BANNER DESKTOP
+========================= */
+
+.banner {
   width: 100%;
 
-  /* REMOVE LIMITES QUE CAUSAM CORTE */
   max-width: 100%;
 
-  /* ALTURA IDEAL PARA NOTEBOOKS 14"+ */
   height: 950px;
 
   min-height: 820px;
 
-  /* IMAGEM */
   background-image: url("imagens/banner7.png");
 
   background-repeat: no-repeat;
 
-  /* MANTÉM O VISUAL BONITO */
+  /* TELAS GRANDES */
   background-size: cover;
 
-  /* AJUSTE PARA NÃO CORTAR AS LATERAIS */
   background-position: center center;
 
   background-color: #07152e;
@@ -95,7 +95,6 @@
 
   text-align: left;
 
-  /* ESPAÇAMENTO CONTROLADO */
   padding-left: 90px;
 
   color: #fff;
@@ -186,30 +185,38 @@
 }
 
 /* =========================
-   NOTEBOOKS 14" E 15"
+   NOTEBOOKS 14" (1366x768)
 ========================= */
 
-@media (min-width: 1366px) and (max-width: 1600px) {
+@media (max-width: 1366px) {
 
   .banner {
-    background-size: cover;
 
-    background-position: center center;
+    /* NÃO CORTA O BANNER */
+    background-size: contain;
 
-    height: 900px;
+    background-position: center top;
+
+    height: 760px;
+
+    padding-left: 60px;
   }
 
   .banner-content {
-    margin-top: 90px;
+    margin-top: 60px;
+  }
+
+  .banner h1 {
+    font-size: 52px;
   }
 
 }
 
 /* =========================
-   TELAS GRANDES / FULL HD
+   TELAS GRANDES
 ========================= */
 
-@media (min-width: 1601px) {
+@media (min-width: 1600px) {
 
   .banner {
     background-size: cover;
