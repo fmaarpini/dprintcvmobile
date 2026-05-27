@@ -76,7 +76,7 @@
 
   min-height: 820px;
 
-  background-image: url("imagens/banner9.png");
+  background-image: url("imagens/banner10.png");
 
   background-repeat: no-repeat;
 
@@ -208,23 +208,27 @@
 @media (max-width: 1366px) {
 
   .banner {
-
-    /* NÃO CORTA O BANNER */
-    background-size: contain;
-
-    background-position: center top;
-
     height: 760px;
 
-    padding-left: 60px;
+    background-size: cover;
+    background-position: center center;
+
+    padding-left: 40px;
   }
 
   .banner-content {
-    margin-top: 60px;
+    margin-left: 520px;   /* antes 710 */
+    margin-top: 35px;
+    max-width: 460px;
   }
 
-  .banner h1 {
-    font-size: 52px;
+  .banner-buttons {
+    gap: 20px;
+  }
+
+  .btn-banner {
+    padding: 14px 22px;
+    font-size: 16px;
   }
 
 }
