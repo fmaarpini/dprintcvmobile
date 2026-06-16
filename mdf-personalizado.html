@@ -42,8 +42,14 @@
         top: 0;
         width: 100%;
         z-index: 999;
+        padding: 10px 0;
       }
-      .navbar-brand img {height: 60px;}
+
+      .navbar-brand img {
+        height: 90px;
+        width: auto;
+      }
+
       .nav-link {
         color: #fff !important;
         font-size: 18px;
@@ -64,19 +70,20 @@
 
       /* BANNER */
   .banner {
-  width: 100%;
-  max-width: 1920px;
-  height: 950px;
-  background: url("imagens/") no-repeat center center/cover;
-  display: flex;
-  justify-content: flex-start;  /* mantém à esquerda */
-  align-items: center;           /* centraliza verticalmente */
-  text-align: left;              /* texto alinhado à esquerda */
-  padding-left: 90px;            /* ainda mais para a esquerda */
-  color: #fff;
-  margin-top: 90px;
-  position: relative;
-}
+        width: 100%;
+        max-width: 1920px;
+        height: 950px;
+        background: url("imagens/banner.png") no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 80px;
+        color: #fff;
+        margin-top: 90px;
+        position: relative;
+      }
+      
 .banner h1 {
   font-size: 60px;
   font-weight: bold;
